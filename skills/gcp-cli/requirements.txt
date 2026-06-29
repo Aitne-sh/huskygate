@@ -1,0 +1,3 @@
+# GCP CLI skill has no Python dependencies.
+# Google Cloud SDK (gcloud, gsutil, bq) must be installed on the host system.
+# Install: https://cloud.google.com/sdk/docs/install

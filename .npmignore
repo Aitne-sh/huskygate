@@ -1,0 +1,56 @@
+# Source & config (dist/ and skills/ are included via package.json "files")
+src/
+scripts/
+docs/
+instructions/
+data/
+workdir/
+coverage/
+.coverage-tmp/
+_output/
+
+# Build & dev config
+tsconfig.json
+tsup.config.ts
+vitest.config.ts
+biome.json
+CLAUDE.md
+DESIGN.md
+PLAN-*.md
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+
+# CI & git
+.github/
+.git/
+.gitignore
+
+# Claude / agent working files
+.claude/
+AGENTS_bk*
+GEMINI_bk*
+
+# Python artifacts inside skills (already excluded by files glob, but safety net)
+__pycache__/
+.venv/
+*.pyc
+
+# Test files
+*.test.ts
+*.test.js
+*.coverage*.test.ts
+
+# Node version file
+.nvmrc
+
+# Logs & temp
+*.log
+*.tgz

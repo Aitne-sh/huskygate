@@ -1,0 +1,5 @@
+{
+  "schemaVersion": 1,
+  "excludeDirs": [".venv", "__pycache__", ".git", "node_modules"],
+  "envVars": ["PERPLEXITY_API_KEY"]
+}

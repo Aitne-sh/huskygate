@@ -1,0 +1,2 @@
+# No Python dependencies -- uses only stdlib (email, base64, json).
+# This file exists for consistency with the skill template convention.

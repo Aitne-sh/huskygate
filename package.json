@@ -1,0 +1,87 @@
+{
+  "name": "huskygate",
+  "version": "0.1.0",
+  "description": "AI-powered Slack bot orchestrator with multi-agent sessions, scheduled tasks, and a web dashboard",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "license": "MIT",
+  "author": "Shuto Shimoda",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aitne-sh/HuskyGate.git"
+  },
+  "homepage": "https://github.com/Aitne-sh/HuskyGate#readme",
+  "bugs": {
+    "url": "https://github.com/Aitne-sh/HuskyGate/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "slack",
+    "bot",
+    "ai",
+    "orchestrator",
+    "agent",
+    "claude",
+    "codex",
+    "gemini",
+    "dashboard"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "bin": {
+    "huskygate": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "skills",
+    "!**/__pycache__"
+  ],
+  "scripts": {
+    "deps:install": "node scripts/install-deps.mjs",
+    "dev": "tsx src/cli.ts dev",
+    "build": "tsup",
+    "start": "node dist/cli.js dev",
+    "typecheck": "tsc --noEmit",
+    "verify": "npm run typecheck && npm run lint && npm run test && npm run build",
+    "prepublishOnly": "npm run build",
+    "verify:pack": "node scripts/verify-pack.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "node scripts/biome.mjs check src/",
+    "lint:fix": "node scripts/biome.mjs check --fix src/",
+    "format": "node scripts/biome.mjs format --write src/"
+  },
+  "dependencies": {
+    "@slack/bolt": "^4.2.0",
+    "better-sqlite3": "^11.8.0",
+    "commander": "^13.1.0",
+    "cron-parser": "^5.5.0",
+    "zod": "^4.3.6"
+  },
+  "optionalDependencies": {
+    "pptxgenjs": "^4.0.1",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
+    "@slack/types": "^2.18.0",
+    "@slack/web-api": "^7.12.0",
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^24.12.0",
+    "@vitest/coverage-v8": "^3.0.0",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}

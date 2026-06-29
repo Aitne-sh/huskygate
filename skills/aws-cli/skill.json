@@ -1,0 +1,5 @@
+{
+  "schemaVersion": 1,
+  "excludeDirs": [".venv", "__pycache__", ".git", "node_modules"],
+  "envVars": ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "AWS_DEFAULT_REGION"]
+}
