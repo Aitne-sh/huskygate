@@ -9,10 +9,14 @@
 
 **HuskyGate** is a remote orchestrator that runs and manages AI CLIs (Claude / Codex / Gemini) on your local machine via Slack DM, with a full-featured web dashboard.
 
-## Install from npm
+## Install from source
 
 ```bash
-npm install -g huskygate
+git clone https://github.com/Aitne-sh/huskygate.git
+cd huskygate
+npm install
+npm run build
+npm link
 ```
 
 ### Prerequisites
@@ -61,15 +65,11 @@ huskygate start
 
 ## クイックスタート（最短）
 
-### npm からインストール
-
-```bash
-npm install -g huskygate
-```
-
 ### ソースからビルド
 
 ```bash
+git clone https://github.com/Aitne-sh/huskygate.git
+cd huskygate
 npm install
 npm run build
 npm link
